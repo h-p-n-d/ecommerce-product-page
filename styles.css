@@ -1,0 +1,171 @@
+:root {
+  --orange: hsl(26, 100%, 55%);
+  --paleOrange: hsl(25, 100%, 94%);
+  --veryDarkBlue: hsl(220, 13%, 13%);
+  --darkGrayishBlue: hsl(219, 9%, 45%);
+  --grayishBlue: hsl(220, 14%, 75%);
+  --lightGrayishBlue: hsl(223, 64%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+nav {
+  height: 150px;
+}
+
+.nav a {
+  color: var(--darkGrayishBlue);
+}
+
+.nav-avatar {
+  width: 60px;
+  height: 60px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+}
+
+.nav-avatar:hover {
+  border: 2px solid var(--orange);
+  cursor: pointer;
+}
+
+.nav-logo {
+  width: 150px;
+  height: 25px;
+}
+
+.nav-link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  max-height: 100%;
+  border-bottom: 4px solid transparent;
+}
+
+.nav-link:hover {
+  border-bottom: 4px solid var(--orange);
+  color: var(--veryDarkBlue);
+}
+
+.cart button {
+  background: none;
+  border: none;
+}
+
+.cart button:hover {
+  filter: invert(11%) sepia(21%) saturate(377%) hue-rotate(178deg) brightness(94%) contrast(95%);
+}
+
+.preview-image img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.preview-thumbnails div {
+  width: 20%;
+  height: 20%;
+}
+
+.text-orange {
+  color: var(--orange);
+}
+
+h1 {
+  color: var(--veryDarkBlue);
+}
+
+.desc {
+  color: var(--darkGrayishBlue);
+}
+
+.badge {
+  background-color: var(--paleOrange);
+}
+
+.prize p {
+  color: var(--grayishBlue);
+}
+
+.btn-group {
+  width: 40%;
+  padding: 10px;
+  background-color: var(--lightGrayishBlue);
+  color: var(--veryDarkBlue);
+}
+
+.bg-orange {
+  background-color: var(--orange);
+}
+
+.add-cart {
+  width: 60%;
+  border: none;
+  -webkit-box-shadow: 0px 27px 40px -24px var(--orange);
+  -moz-box-shadow: 0px 27px 40px -24px var(--orange);
+  box-shadow: 0px 27px 40px -24px var(--orange);
+}
+
+.thumb-active {
+  border: 3px solid var(--orange);
+}
+
+.thumb-active img {
+  opacity: 0.5;
+}
+
+#minusCount {
+  height: 100%;
+  background-image: url("images/icon-minus.svg");
+  background-repeat: no-repeat;
+  background-position: 15px 10px;
+}
+
+#plusCount {
+  height: 100%;
+  background-image: url("images/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-position: 15px 6px;
+}
+
+.cart button {
+  height: 50px;
+  width: 50px;
+  background-image: url("images/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 15px 15px;
+}
+
+.cart-popover {
+  width: 400px;
+  height: 250px;
+  background-color: var(--white);
+  position: absolute;
+  top: 120px;
+  right: -90px;
+}
+
+.cart-popover-visibility {
+  visibility: hidden;
+}
+
+.popover-body {
+  color: var(--darkGrayishBlue);
+}
+
+.add-cart:hover,
+.btn-group button:hover,
+.preview-thumbnails img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.add-cart,
+.btn-group button,
+.nav-avatar,
+.preview-thumbnails img {
+  transition: all 0.3s;
+}
