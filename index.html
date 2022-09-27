@@ -28,10 +28,44 @@
   </head>
   <body>
     <div class="container mh-100">
-      <nav class="navbar d-flex p-0 border-bottom position-relative">
+      <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="nav d-flex flex-column fs-4 fw-bold">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Collections</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Men</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Women</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav class="d-flex p-0 border-bottom position-relative navbar">
         <div class="d-flex align-items-center h-100">
-          <img class="me-5 nav-logo" src="images/logo.svg" alt="" />
-          <div class="ms-3 h-100">
+          <div>
+            <img
+              class="menu-btn me-4 img-fluid"
+              src="images/icon-menu.svg"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasMenu"
+              alt="menu"
+            />
+            <img class="me-5 nav-logo" src="images/logo.svg" alt="" />
+          </div>
+          <div class="ms-3 h-100 navigation">
             <ul class="nav h-100">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="#">Collections</a>
@@ -56,7 +90,7 @@
           <div class="cart-badge cart-popover-visibility">1</div>
           <img class="ms-4 img-fluid nav-avatar" src="images/image-avatar.png" alt="avatar" />
         </div>
-        <div class="cart-popover cart-popover-visibility shadow rounded-4 animate__animated">
+        <div class="cart-popover-visibility shadow rounded-4 animate__animated cart-popover">
           <div class="w-100 border-bottom p-3 fw-bold">Cart</div>
           <div class="popover-body h-100 d-flex flex-column align-items-center justify-content-center p-4">
             <p class="fw-bold m-5">Your cart is empty.</p>
@@ -64,9 +98,9 @@
           </div>
         </div>
       </nav>
-      <main class="d-flex p-5 mt-3">
+      <main class="d-flex p-5 mt-3 mobile-main">
         <div class="preview w-50">
-          <div class="preview-image w-100 d-flex justify-content-center px-5">
+          <div class="w-100 d-flex justify-content-center px-5 preview-image">
             <img class="rounded-4" src="images/image-product-1.jpg" alt="image product" />
           </div>
           <div class="preview-thumbnails w-100 mt-4 d-flex justify-content-between px-5">
@@ -76,30 +110,8 @@
             <div class="rounded-4 overflow-hidden"><img class="w-100" src="images/image-product-4-thumbnail.jpg" alt="image product" /></div>
           </div>
         </div>
-        <div class="offer w-50 p-5">
-          <p class="text-uppercase fw-bold fs-6 text-orange">Sneaker Company</p>
-          <h1 class="fw-bold">Fall Limited Edition Sneakers</h1>
-          <p class="mt-5 mb-4 desc">
-            These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather
-            can offer.
-          </p>
-          <div class="prize">
-            <h2 class="fw-bold d-flex align-items-center"><span>$125.00</span> <span class="m-2 badge text-orange fs-6">50%</span></h2>
-            <p class="fw-bold text-decoration-line-through">$250.00</p>
-          </div>
-          <div class="buttons d-flex mt-5">
-            <div id="counter" class="btn-group d-flex align-items-center rounded-3" role="group" aria-label="buttons">
-              <button id="minusCount" type="button" class="btn"></button>
-              <div id="counterAmount" class="fw-bold w-50 text-center">1</div>
-              <button id="plusCount" type="button" class="btn"></button>
-            </div>
-            <button class="rounded-3 ms-3 fw-bold text-white bg-orange add-cart d-flex align-items-center justify-content-center">
-              <img class="me-3" src="images/icon-cart-white.svg" />Add to cart
-            </button>
-          </div>
-        </div>
         <div class="lightbox position-absolute d-flex flex-column align-items-center justify-content-center animate__animated">
-          <div class="w-25 d-flex flex-column align-items-center justify-content-center">
+          <div class="w-25 d-flex flex-column align-items-center justify-content-center mobile-lightbox">
             <div class="lightbox-close mb-3">
               <img src="images/icon-close.svg" alt="" />
             </div>
@@ -112,7 +124,7 @@
                 <img src="images/icon-next.svg" alt="" />
               </button>
             </div>
-            <div class="lightbox-thumbnails d-flex justify-content-evenly m-4 h-50">
+            <div class="d-flex justify-content-evenly m-4 h-50 lightbox-thumbnails">
               <div class="lightbox-thumbnail-active rounded-4 overflow-hidden">
                 <img class="w-100" src="images/image-product-1-thumbnail.jpg" alt="image product" />
               </div>
@@ -122,10 +134,33 @@
             </div>
           </div>
         </div>
+        <div class="w-50 p-5 offer">
+          <p class="text-uppercase fw-bold fs-6 text-orange">Sneaker Company</p>
+          <h1 class="fw-bold">Fall Limited Edition Sneakers</h1>
+          <p class="mt-5 mb-4 desc">
+            These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather
+            can offer.
+          </p>
+          <div class="prize">
+            <h2 class="fw-bold d-flex align-items-center"><span>$125.00</span> <span class="m-2 badge text-orange fs-6">50%</span></h2>
+            <p class="fw-bold text-decoration-line-through">$250.00</p>
+          </div>
+          <div class="d-flex mt-5 buttons">
+            <div id="counter" class="btn-group d-flex align-items-center rounded-3" role="group" aria-label="buttons">
+              <button id="minusCount" type="button" class="btn"></button>
+              <div id="counterAmount" class="fw-bold w-50 text-center">1</div>
+              <button id="plusCount" type="button" class="btn"></button>
+            </div>
+            <button class="rounded-3 ms-3 fw-bold text-white bg-orange add-cart d-flex align-items-center justify-content-center">
+              <img class="me-3" src="images/icon-cart-white.svg" />Add to cart
+            </button>
+          </div>
+        </div>
       </main>
     </div>
     <footer class="text-center">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">happnd</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+      <a href="https://github.com/happnd">happnd</a>.
     </footer>
   </body>
 </html>

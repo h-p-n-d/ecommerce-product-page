@@ -14,7 +14,7 @@ body {
 }
 
 nav {
-  height: 150px;
+  height: 130px;
 }
 
 .nav a {
@@ -258,6 +258,7 @@ h1 {
   top: 0;
   left: 0;
   visibility: hidden;
+  z-index: 1;
 }
 
 .lightbox-preview,
@@ -277,4 +278,164 @@ h1 {
 .nav-avatar,
 .preview-thumbnails img {
   transition: all 0.3s;
+}
+
+.menu-btn {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  nav {
+    height: 90px;
+    border: none;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .navbar {
+    padding: 0px 14px !important;
+    position: fixed !important;
+    top: 0px;
+    left: 0;
+    background-color: var(--white);
+  }
+
+  .navbar div {
+    justify-content: space-between !important;
+  }
+
+  .nav-logo {
+    width: 120px;
+    height: 25px;
+    margin: 0px !important;
+  }
+
+  .menu-btn {
+    display: inline-block;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .nav-avatar {
+    width: 30px;
+    height: 30px;
+  }
+
+  .cart button {
+    height: 30px;
+    width: 30px;
+    background-position: 8px 5px;
+  }
+
+  .mobile-main {
+    flex-direction: column;
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-top: 90px !important;
+  }
+
+  .preview {
+    display: none !important;
+  }
+
+  .container {
+    padding: 0px;
+  }
+
+  .offer {
+    width: 100% !important;
+    padding: 30px !important;
+  }
+
+  .prize p,
+  .prize h2 {
+    display: inline-block !important;
+  }
+
+  .prize {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .buttons {
+    flex-direction: column;
+    margin-top: 15px !important;
+  }
+
+  .btn-group,
+  .add-cart {
+    width: 100%;
+  }
+
+  .add-cart {
+    margin: 0 !important;
+    padding: 10px 0px;
+    margin-top: 20px !important;
+  }
+
+  .btn-group button {
+    height: 45px !important;
+  }
+
+  .btn-group {
+    padding: 0px !important;
+  }
+
+  #minusCount {
+    background-position: 32px 20px;
+  }
+
+  #plusCount {
+    background-position: 32px 16px;
+  }
+
+  .lightbox {
+    position: relative !important;
+    visibility: visible;
+    background: none;
+    z-index: 0;
+  }
+
+  .mobile-lightbox {
+    width: 100% !important;
+  }
+
+  .lightbox-thumbnails {
+    display: none !important;
+  }
+
+  .lightbox-preview {
+    border-radius: 0px !important;
+    width: 100% !important;
+    height: 80% !important;
+  }
+
+  .lightbox-button-left {
+    left: 20px;
+  }
+
+  .lightbox-button-right {
+    right: 20px;
+  }
+
+  .lightbox-close {
+    display: none;
+  }
+
+  .cart-popover {
+    left: 0;
+    width: 95%;
+    margin: 0px 10px;
+  }
+
+  .nav-link:hover {
+    border-bottom: 4px solid transparent;
+  }
+
+  footer {
+    padding: 30px;
+  }
 }
